@@ -16,8 +16,8 @@ def twister(nums , rot):
     if rot > 0:
         print(nums)
         result = nums[-rot:]
-        nums = [nums.pop() for _ in range(rot)]
-        print(nums)
+        for _ in range(rot):
+            nums.pop()
     return result + nums
         
 
