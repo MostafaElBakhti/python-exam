@@ -1,18 +1,16 @@
 def hidenp(small: str, big: str) -> bool:
-    for x in small:
-        # print(f"s1 :{x}")
-        for y in big: 
-            # print(y)
-            found = 0
-            if x == y:
-                found = 1
-                break
-        if found == 0:
-            return False
-    return True
+
+    i = 0 
+    for c in big:
+        if i < len(small) and c == small[i]:
+            i += 1
+
+    return i == len(small)
+
 
 print(hidenp("abc", "a1b2c3"))
 print(hidenp("aec", "abcde"))
+print(hidenp("sing","subsequence testing"))
 
 
 
