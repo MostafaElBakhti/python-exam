@@ -1,13 +1,15 @@
 def echo_validator(text: str) -> bool:
     cleaned = ""
-    for char in text.lower():
+
+    for char in text:
         if char.isalpha():
             cleaned += char
 
     if cleaned == "":
         return False
-    # else:
-    return cleaned == cleaned[::-1]
+
+    return cleaned.lower() == cleaned[::-1].lower()
+    
 
 
 
