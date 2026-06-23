@@ -1,16 +1,18 @@
+def count_vowels(text: str):
+    vowels = ("aeiou")
+    count = 0 
+    for x in text:
+        if x in vowels:
+            count += 1
+    return count
+
+
 def cryptic_sorter(strings: list[str]) -> list[str]:
 
     
-    return sorted(strings, key=(len, ))
+    return sorted(strings, key=lambda x: (len(x), x.lower(),x , count_vowels(x)) )
 
 
-print(cryptic_sorter(["apple", "banana", "kiwi", "cherry", "aab","aaa", "aac", "a", "B"]))
-
-
-# c = ["apple", "banana", "kiwi", "cherry", "aa"]
-# c.sort(key=len)
-# print(c)
-
-# d = [(1, 3), (2, 2), (3, 1),(2,0)]
-# d.sort(key=lambda x: x[1])
-# print(d)
+print(cryptic_sorter(["aaa","bbb","AAA","BBB"])) 
+# Output
+# ["AAA", "aaa", "BBB", "bbb"
