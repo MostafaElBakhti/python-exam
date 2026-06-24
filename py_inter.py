@@ -1,10 +1,11 @@
 def inter(s1: str, s2: str) -> str:
-    khawi = ""
-    
-    for x in s1:
-        if x in s2 and x not in khawi:
-            khawi += x
-    return khawi
+    text = ""
+
+    for char in s1:
+        if char in s2 and char not in text:
+            text += char 
+
+    return text
 
 
 print(inter("hello", "world"))

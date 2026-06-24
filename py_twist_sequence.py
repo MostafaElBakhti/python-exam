@@ -1,24 +1,12 @@
-# def twister(nums, n):
-#     if not nums:
-#         return []
+def twister(nums, n):
+    if not nums:
+        return []
     
-#     tool = len(nums)
-#     n = n % tool
+    tool = len(nums)
+    n = n % tool
 
-#     return nums[-n:] + nums[:-n]
+    return nums[-n:] + nums[:-n]
 
-
-
-def twister(nums , rot):
-    if rot == 0:
-        return nums
-    result = []
-    if rot > 0:
-        print(nums)
-        result = nums[-rot:]
-        for _ in range(rot):
-            nums.pop()
-    return result + nums
         
 
 print(twister([1,2,3,4], 2))

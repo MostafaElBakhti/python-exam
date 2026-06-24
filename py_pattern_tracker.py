@@ -1,12 +1,21 @@
 def pattern_tracker(text: str) -> int:
-    count = 0
-    i = 0
-    while i < len(text) - 1:
-        if text[i].isdigit() and text[i+1].isdigit():
-            if (int(text[i+1] )- int(text[i])) == 1:
-                count += 1
-        i += 1
-    return count
+    return (text.count("01") +
+            text.count("12")+
+            text.count("23")+
+            text.count("34")+
+            text.count("45")+
+            text.count("56")+
+            text.count("67")+
+            text.count("78")+
+            text.count("89"))
+    # count = 0
+    # i = 0
+    # while i < len(text) - 1:
+    #     if text[i].isdigit() and text[i+1].isdigit():
+    #         if (int(text[i+1] )- int(text[i])) == 1:
+    #             count += 1
+    #     i += 1
+    # return count
 
 
 print(pattern_tracker(""))                  # 0
@@ -26,7 +35,7 @@ print(pattern_tracker("987654321"))         # 0
 print(pattern_tracker("97531"))             # 0
 
 print(pattern_tracker("12a34"))             # 2
-print(pattern_tracker("127a345"))           # 3
+print(pattern_tracker("12045"))           # 3
 print(pattern_tracker("1a2b3c4"))           # 0
 
 print(pattern_tracker("ab12cd23"))          # 2
