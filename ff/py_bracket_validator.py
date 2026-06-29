@@ -17,6 +17,23 @@ def bracket_validator(s: str) -> bool:
 
     return len(stack) == 0
 
+def bracket_validator(s: str) -> bool:
+    stack = []
+
+    pairs = {
+        ")": "(",
+        "]": "[",
+        "}": "{"
+    }
+
+    for char in s:
+        if char in "([{":
+            stack.append(char)
+
+        elif char in pairs:
+            if not stack or stack.pop()  != pairs[char]:
+                return False
+    return len(stack) == 0
 
 print(bracket_validator("()"))                # True
 print(bracket_validator("()[]{}"))            # True
