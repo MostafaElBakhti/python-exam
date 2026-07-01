@@ -1,15 +1,16 @@
 def string_sculptor(text: str) -> str:
-    txt = ""
     upper = True
+    result = ""
+
     for char in text:
-        if upper:
-            txt += char.upper()
+        if char.isalpha():    
+            if upper:
+                result += char.lower()
+            else:
+                result += char.upper()
+            upper = not upper
         else:
-            txt += char.lower()
-        upper = not upper
-
-    return txt
-
-print(string_sculptor("hello"))
-# Output
-# "hElLo"
+            result += char
+    return result
+            
+print(string_sculptor("HELLO"))
