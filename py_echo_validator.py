@@ -20,19 +20,48 @@
 # print(echo_validator(""))
 
 
+# def echo_validator(text: str) -> bool:
+#     cleaned = ""
+
+#     for char in text:
+#         if char.isalpha():
+#             cleaned += char.lower()
+
+#     if cleaned == "":
+#         return  False
+
+#     return cleaned == cleaned[::-1]
+
+# print(echo_validator("A man a plan a canal Panama"))
+# print(echo_validator("race a car"))
+# print(echo_validator("Was it a car or a cat I saw"))
+# print(echo_validator(""))
+
+
+
+
+# def echo_validator(text: str) -> bool:
+#     text = "".join(char.lower() for char in text if char.isalpha())
+
+#     length = len(text) - 1
+
+#     i = 0 
+    
+#     while(length > i):
+#         if text[length] != text[i]:
+#             return False
+
+#         i += 1
+#         length -= 1
+#     return True
+
+
+
 def echo_validator(text: str) -> bool:
-    cleaned = ""
+    text = "".join(char.lower() for char in text if char.isalpha())
+    return text[::-1] == text
 
-    for char in text:
-        if char.isalpha():
-            cleaned += char.lower()
 
-    if cleaned == "":
-        return  False
 
-    return cleaned == cleaned[::-1]
 
-print(echo_validator("A man a plan a canal Panama"))
-print(echo_validator("race a car"))
-print(echo_validator("Was it a car or a cat I saw"))
-print(echo_validator(""))
+print(echo_validator("gaza!"))
