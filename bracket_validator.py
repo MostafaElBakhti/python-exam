@@ -1,6 +1,4 @@
 
-
-
 def bracket_validator(s: str) -> bool:
     stack = []
 
@@ -18,8 +16,7 @@ def bracket_validator(s: str) -> bool:
             if not stack or stack.pop() != pairs[char]:
                 return False
             
-    return len(stack) == 0
-
+        return len(stack) == 0
 
 
 print(bracket_validator("((())"))
