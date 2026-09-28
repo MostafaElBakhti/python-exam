@@ -1,15 +1,13 @@
-def twister(nums, n):
-    if not nums:
-        return []
-    
-    tool = len(nums)
-    n = n % tool
+    def twister(nums, n):
+        if not nums:
+            return []
 
-    return nums[-n:] + nums[:-n]
+        n = n % len(nums)
+        return nums[-n:] + nums[:-n]
 
-        
+            
 
-print(twister([1,2,3,4], 2))
+    print(twister([1,2,3,4], 2))
 
 # Basic cases
 # print(twister([1, 2, 3, 4, 5], 2))
