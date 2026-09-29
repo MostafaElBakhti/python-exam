@@ -24,6 +24,7 @@ def string_sculptor(text: str) -> str:
 
 print(string_sculptor("aBc123def"))
 print(string_sculptor("Hello World"))
+print(string_sculptor("@     Hello World    @"))
 # Output
 # "pYtHoN3.9!"
 # Output
