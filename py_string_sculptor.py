@@ -13,4 +13,5 @@ def string_sculptor(text: str) -> str:
             result += char
     return result
             
-print(string_sculptor("HELLO"))
+print(string_sculptor("aBc123def"))
+print(string_sculptor("Hello World"))

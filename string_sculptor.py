@@ -1,23 +1,30 @@
-
-
 def string_sculptor(text: str) -> str:
-    mytext = ""
 
-    for char in text :
+    res = ""
+    flag = 1
+
+    for char in text:
         if char.isalpha():
-            mytext += char
-    
-    final_text = ""
-    flag = 0
-    for char in mytext:
-        if flag == 0:
-            final_text += char.lower()
-            flag = 1
+            if flag == 1:
+                res += char.lower()
+                flag = 0
+            else:
+                res += char.upper()
+                flag = 1
         else:
-            final_text += char.upper()
-            flag = 0
+            res += char 
+            if char == " ":
+                flag = 1
+    
+    return res
 
-    return final_text
 
 
-print(string_sculptor("he12llo"))
+
+
+print(string_sculptor("aBc123def"))
+print(string_sculptor("Hello World"))
+# Output
+# "pYtHoN3.9!"
+# Output
+# "hElLo wOrLd"
