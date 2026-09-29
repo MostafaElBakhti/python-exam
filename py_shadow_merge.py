@@ -7,9 +7,7 @@ def _sort(_list):
         j = i + 1
         while(length > j):
             if(_list[i] > _list[j]):
-                tmp = _list[i]
-                _list[i] = _list[j]
-                _list[j] = tmp
+                _list[i] , _list[j] = _list[j] , _list[i]
 
             j += 1
 

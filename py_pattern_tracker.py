@@ -1,13 +1,13 @@
-# def pattern_tracker(text: str) -> int:
-#     return (text.count("01") +
-#             text.count("12")+
-#             text.count("23")+
-#             text.count("34")+
-#             text.count("45")+
-#             text.count("56")+
-#             text.count("67")+
-#             text.count("78")+
-#             text.count("89"))
+def pattern_tracker(text: str) -> int:
+    return (text.count("01") +
+            text.count("12")+
+            text.count("23")+
+            text.count("34")+
+            text.count("45")+
+            text.count("56")+
+            text.count("67")+
+            text.count("78")+
+            text.count("89"))
     # count = 0
     # i = 0
     # while i < len(text) - 1:
